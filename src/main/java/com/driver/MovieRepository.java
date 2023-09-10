@@ -42,7 +42,9 @@ public class MovieRepository {
         List<String> movies_list = new ArrayList<>();
 
         for (Movie movie : movieDirectorMap.get(name)) {
-            movies_list.add(movie.getName());
+            if(movie != null){
+                movies_list.add(movie.getName());
+            }
         }
         return movies_list;
     }
